@@ -1,4 +1,5 @@
 
+import 'package:e_learning_ui/views/demo_screen.dart';
 import 'package:e_learning_ui/views/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +12,9 @@ class ELearningUi extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnboardingScreen(),
+      home:  DemoScreen(),
     );
   }
 }
