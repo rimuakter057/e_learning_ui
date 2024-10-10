@@ -1,6 +1,5 @@
 
-import 'package:e_learning_ui/views/demo_screen.dart';
-import 'package:e_learning_ui/views/onboarding_screen.dart';
+import 'package:e_learning_ui/views/otp_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,9 +11,19 @@ class ELearningUi extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:  DemoScreen(),
+      theme: ThemeData(
+          primaryColor: Colors.deepOrange,
+       textTheme: TextTheme(
+        bodyMedium: TextStyle(
+            color: Colors.white,
+        fontSize: 16,
+        fontWeight: FontWeight.w400
+      )
+    )
+      ),
+      home:  OtpPage(),
     );
   }
 }
