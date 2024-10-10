@@ -17,20 +17,20 @@ class OnboardingScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SizedBox(),
+            const SizedBox(),
             Stack(
               children: [
                 Image.asset("assets/images/boarding_fill.png"),
                 Positioned(
-                    top: 120,
-                    left: 120,
+                    top: 100,
+                    left: 150,
                     child: Image.asset("assets/images/onboarding.png"))
               ],
             ),
             Container(
               height: MediaQuery.sizeOf(context).height * .4,
               width: double.infinity,
-              margin: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
               decoration: BoxDecoration(
                 color: Colors.white, // Background color of the container
                 boxShadow: [

@@ -44,68 +44,70 @@ class OtpPage extends StatelessWidget {
               ],
             )),
           ),
-          Container(
-            height: MediaQuery.sizeOf(context).height * .6,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: AppColors.whiteColor,
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(50),
-                topRight: Radius.circular(50),
+          Expanded(
+            child: Container(
+              height: MediaQuery.sizeOf(context).height * .6,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: AppColors.whiteColor,
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(50),
+                  topRight: Radius.circular(50),
+                ),
               ),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Padding(
-                  padding: EdgeInsets.all(50.0),
-                  child: Row(
-                    // mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.all(50.0),
+                    child: Row(
+                      // mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        ContainerWidget(),
+                        ContainerWidget(),
+                        ContainerWidget(),
+                        ContainerWidget(),
+                        ContainerWidget(),
+                      ],
+                    ),
+                  ),
+                  const Spacer(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      ContainerWidget(),
-                      ContainerWidget(),
-                      ContainerWidget(),
-                      ContainerWidget(),
-                      ContainerWidget(),
+                      Icon(
+                        Icons.access_alarm_rounded,
+                        color: Theme.of(context).primaryColor,
+                      ),
+                      Text(
+                        "7:15",
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            color: Colors.black, fontWeight: FontWeight.bold),
+                      )
                     ],
                   ),
-                ),
-                Spacer(),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.access_alarm_rounded,
-                      color: Theme.of(context).primaryColor,
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: SizedBox(
+            
+                      width: double.infinity,
+                      child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.deepOrange,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5),
+                            )
+                          ),
+                          child: Text(
+                            "Next",
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          )),
                     ),
-                    Text(
-                      "7:15",
-                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          color: Colors.black, fontWeight: FontWeight.bold),
-                    )
-                  ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: SizedBox(
-
-                    width: double.infinity,
-                    child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.deepOrange,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5),
-                          )
-                        ),
-                        child: Text(
-                          "Next",
-                          style: Theme.of(context).textTheme.bodyMedium,
-                        )),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
           ),
         ],

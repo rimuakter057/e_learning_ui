@@ -1,4 +1,5 @@
 
+import 'package:e_learning_ui/views/onboarding_screen.dart';
 import 'package:e_learning_ui/views/otp_page.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class ELearningUi extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primaryColor: Colors.deepOrange,
-       textTheme: TextTheme(
+       textTheme: const TextTheme(
         bodyMedium: TextStyle(
             color: Colors.white,
         fontSize: 16,
@@ -23,7 +24,7 @@ class ELearningUi extends StatelessWidget {
       )
     )
       ),
-      home:  OtpPage(),
+      home:  OtpPage (),
     );
   }
 }
